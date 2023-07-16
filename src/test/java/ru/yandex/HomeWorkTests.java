@@ -6,6 +6,7 @@ public class HomeWorkTests {
 
     @Test
     void test() {
-        HomeWork.reverse(12);
+        HomeWork.reverse(9696);
+        HomeWork.difference(6650);
     }
 }

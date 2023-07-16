@@ -1,7 +1,6 @@
 package ru.yandex;
 
 public class HomeWork {
-
     /**
      * Функция получает на вход 4-х значное число
      * Функция должна вернуть число в обратном порядке
@@ -13,8 +12,17 @@ public class HomeWork {
      * 1000 -> 1 (это называется не значащие нули)
      * */
     public static int reverse(int value) {
-        // todo
-        return 0;
+        int a = value;
+        int b = 0;
+
+        while (a > 0) {
+            int reverseA = a % 10;
+            a = a / 10;
+            b = b * 10;
+            b = b + reverseA;
+        }
+        System.out.println(b);
+        return b;
     }
 
     /**
@@ -26,9 +34,10 @@ public class HomeWork {
      * подумать над кейсами
      * */
     public static int difference(int value) {
-        // todo
-        // my code
-        return 0;
+        int a = value / 100;
+        int b = value % 100;
+        System.out.println(a - b);
+        return a - b;
     }
 
 }
