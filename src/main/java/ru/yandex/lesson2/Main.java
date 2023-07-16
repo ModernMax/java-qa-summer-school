@@ -1,5 +1,11 @@
 package ru.yandex.lesson2;
 
+import ru.yandex.lesson2.homework.Loc;
+import ru.yandex.lesson2.homework.Lot;
+import ru.yandex.lesson2.homework.SerialInventory;
+import ru.yandex.lesson2.homework.SerialInventoryBuilder;
+import ru.yandex.lesson2.homework.Sku;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -21,4 +27,16 @@ public class Main {
         Line line = Line.of(1, 3, 1, 5);
 
     }
+
+    SerialInventory serialInventory = SerialInventoryBuilder.builder()
+            .withSerialKey(1789634)
+            .withSku(new Sku(001, 006650041040, "Подарочный набор"))
+            .withLot(new Lot(new Sku(001, 006650041040, "Подарочный набор"),
+                    002,
+                    7651))
+            .withLoc(new Loc(003, "P01-01A5", "MEZ-4",
+                    345, 231, 18,
+                    8, 1,12))
+            .withQuantity(26)
+            .build();
 }
